@@ -7,16 +7,12 @@ In `Cargo.toml` add:
 ```toml
 [dependencies]
 optick = "1.3.1"
-optick_attr = "0.0.1"
+optick_attr = "0.1.0"
 ```
 
-API:
-```rust
-1. #[optick_attr::profile] // Instrument marked function
-2. #[optick_attr::capture("capture_name")] // Generate performance capture for the selected function and save it to {working_dir}/capture_name(date-time).opt
-```
-
-Example usage:
+## #[optick_attr::profile]
+Instrument function.
+Example:
 ```rust
 #[optick_attr::profile]
 fn fibonacci(n: u32) -> u32 {
@@ -27,7 +23,13 @@ fn fibonacci(n: u32) -> u32 {
     };
     return res;
 }
+```
 
+## #[optick_attr::capture("capture_name")]
+Generate performance capture for function.
+Capture is saved to {working_dir}/capture_name(date-time).opt.
+Example:
+```rust
 #[optick_attr::capture("capture_name")]
 pub fn main() {
     fibonacci(10);
