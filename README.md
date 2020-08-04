@@ -1,4 +1,8 @@
 # Function attributes for [Optick Profiler](https://github.com/bombomby/optick)
+[![Build Status](https://github.com/bombomby/optick-attr-rs/workflows/Rust/badge.svg)](https://github.com/bombomby/optick-attr-rs/actions?workflow=Rust)
+[![Crates.io](https://img.shields.io/crates/v/optick-attr.svg)](https://crates.io/crates/optick-attr)
+[![Docs](https://docs.rs/optick-attr/badge.svg)](https://docs.rs/optick-attr)
+
 A set of procedural macros to simplify performance instrumentation of the code.
 ![](https://optick.dev/images/screenshots/optick/Optick.png)
 
@@ -8,8 +12,8 @@ In `Cargo.toml` add:
 
 ```toml
 [dependencies]
-optick = "1.3.1"
-optick_attr = "0.2.0"
+optick = "1.3.2"
+optick_attr = "0.3.0"
 ```
 
 ## #[optick_attr::profile]
