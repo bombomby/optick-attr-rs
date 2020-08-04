@@ -8,7 +8,7 @@ In `Cargo.toml` add:
 ```toml
 [dependencies]
 optick = "1.3.1"
-optick_attr = "0.1.0"
+optick_attr = "0.2.0"
 ```
 
 ## #[optick_attr::profile]
