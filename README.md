@@ -1,5 +1,6 @@
 # Function attributes for [Optick Profiler](https://github.com/bombomby/optick)
 A set of procedural macros to simplify performance instrumentation of the code.
+![](https://optick.dev/images/screenshots/optick/Optick.png)
 
 ## How to use
 
