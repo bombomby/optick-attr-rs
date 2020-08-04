@@ -1,4 +1,5 @@
-# Rust procedural macro library for [Optick Profiler](https://github.com/bombomby/optick)
+# Function attributes for [Optick Profiler](https://github.com/bombomby/optick)
+A set of procedural macros to simplify performance instrumentation of the code.
 
 ## How to use
 
@@ -37,7 +38,7 @@ Use Optick GUI to open saved *.opt capture for further analysis:
 https://github.com/bombomby/optick/releases
 
 ## Optick API
-Based and fully compatible with [Rust Optick API](https://github.com/bombomby/optick-rs).
+Fully compatible with [Rust Optick API](https://github.com/bombomby/optick-rs).
 
 ## Run as Administartor to collect ETW events
 Optick uses ETW to collect hardware counters: switch-contexts, auto-sampling, CPU core utilization, etc.
