@@ -1,10 +1,10 @@
 extern crate proc_macro;
 use proc_macro::TokenStream;
 use quote::quote;
-use syn::{ItemFn, parse_macro_input, parse_quote};
+use syn::{parse_macro_input, parse_quote, ItemFn};
 
 /// Instrument selected function
-/// 
+///
 /// Example:
 /// #[optick_attr::profile]
 /// fn calc() {
@@ -34,7 +34,7 @@ pub fn profile(_attr: TokenStream, item: TokenStream) -> TokenStream {
 /// Generate profiling capture for the selected function
 /// Saves capture to {working_dir}/capture_name(date-time).opt
 /// Note: You could use full path for the name (e.g. "D:/captures/game")
-/// 
+///
 /// Example:
 /// #[optick_attr::capture("capture_name")]
 /// pub fn main() {
@@ -48,7 +48,7 @@ pub fn capture(attr: TokenStream, item: TokenStream) -> TokenStream {
     let path = if path_length < 2 {
         "optick_capture"
     } else {
-        &path_arg[1..path_length-1]
+        &path_arg[1..path_length - 1]
     };
     let mut function = parse_macro_input!(item as ItemFn);
     let body = &function.block;
